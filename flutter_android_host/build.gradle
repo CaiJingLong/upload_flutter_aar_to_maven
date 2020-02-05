@@ -8,6 +8,12 @@ buildscript {
         maven{
             url 'https://maven.aliyun.com/repository/jcenter'
         }
+        maven{
+            url 'http://localhost:9000/repository/maven-releases/'
+        }
+        maven{
+            url 'http://download.flutter.io'
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
@@ -24,6 +30,12 @@ allprojects {
         }
         maven{
             url 'https://maven.aliyun.com/repository/jcenter'
+        }
+        maven{
+            url 'http://localhost:9000/repository/maven-releases/'
+        }
+        maven{
+            url 'http://download.flutter.io'
         }
     }
 }

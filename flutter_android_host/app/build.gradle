@@ -17,6 +17,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildTypes {
+        profile {
+            initWith debug
+        }
+    }
 }
 
 dependencies {
@@ -26,4 +31,9 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    def flutterModuleVersion = '1.0.4'
+    debugImplementation "com.example.flutter_module_example:flutter_debug:$flutterModuleVersion"
+    profileImplementation "com.example.flutter_module_example:flutter_profile:$flutterModuleVersion"
+    releaseImplementation "com.example.flutter_module_example:flutter_release:$flutterModuleVersion"
 }
